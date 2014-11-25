@@ -1,14 +1,140 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 <head>
-  <title>Login</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
 
-<%= yield %>
+  <title>Become Skilled.</title>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">    
+  <link rel="shortcut icon" href="favicon.ico">  
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>  
+    
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    
+  <!-- Plugins CSS -->    
+  <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="assets/plugins/animate-css/animate.min.css">
+    
+  <!-- Theme CSS -->  
+  <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    
+<!-- Mobile Specifics -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="HandheldFriendly" content="true"/>
+<meta name="MobileOptimized" content="320"/>   
+
+<!-- Mobile Internet Explorer ClearType Technology -->
+<!--[if IEMobile]>  <meta http-equiv="cleartype" content="on">  <![endif]-->
+
+<!-- Bootstrap -->
+<link href="_include/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Main Style -->
+<link href="_include/css/main.css" rel="stylesheet">
+
+<!-- FancyBox -->
+<link href="_include/css/fancybox/jquery.fancybox.css" rel="stylesheet">
+
+<!-- Font Icons -->
+<link href="_include/css/fonts.css" rel="stylesheet">
+
+<!-- Shortcodes -->
+<link href="_include/css/shortcodes.css" rel="stylesheet">
+
+<!-- Responsive -->
+<link href="_include/css/bootstrap-responsive.min.css" rel="stylesheet">
+<link href="_include/css/responsive.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="_include/css/custom.css" rel="stylesheet">
+
+<!-- Google Font -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
+<!-- Fav Icon -->
+<link rel="shortcut icon" href="#">
+
+<link rel="apple-touch-icon" href="#">
+<link rel="apple-touch-icon" sizes="114x114" href="#">
+<link rel="apple-touch-icon" sizes="72x72" href="#">
+<link rel="apple-touch-icon" sizes="144x144" href="#">
+
+<!-- Modernizr -->
+<script src="_include/js/modernizr.js"></script>
+
+    
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+   <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head> 
+
+<body class="home-page">
+    
+  <!-- * Facebook Like button script starts -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+  <!-- * Facebook Like button script ends -->
+    
+<div class="wrapper">
+
+  <!-- ******HEADER****** --> 
+  <%= render partial: 'layouts/header'%>
+
+<!-- ****FLASH MESSAGE**** -->
+
+<% flash.each do |name, msg| %>
+     <%= content_tag(:div, msg, class: "alert alert-info") %>
+<% end %>
+
+ <!-- ****PAGE YIELD**** -->
+        
+    <%= yield %>
+        
+            
+</div><!--//wrapper-->
+    
+  <!-- ******FOOTER****** --> 
+  <%= render partial: 'layouts/footer'%>
+    
+  <!-- *****CONFIGURE STYLE****** -->  
+ 
+  <!-- Javascript -->          
+  <script type="text/javascript" src="assets/plugins/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="_include/js/jquery.isotope.js"></script> <!-- Isotope Filter -->
+  <script type="text/javascript" src="_include/js/jquery.fancybox.pack.js"></script> <!-- Fancybox -->
+  <script type="text/javascript" src="_include/js/jquery.fancybox-media.js"></script> <!-- Fancybox for Media -->
+  <script type="text/javascript" src="assets/plugins/detectmobilebrowser.js"></script> 
+  <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+  <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+  <script type="text/javascript" src="assets/plugins/jquery-placeholder/jquery.placeholder.js"></script>
+  <script type="text/javascript" src="assets/plugins/jquery-inview/jquery.inview.min.js"></script>
+  <script type="text/javascript" src="assets/plugins/FitVids/jquery.fitvids.js"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>   
+  
+  <!--[if !IE]>--> 
+  <script type="text/javascript" src="assets/js/animations.js"></script> 
+  <!--<![endif]-->
 
 </body>
-</html>
+</html> 
